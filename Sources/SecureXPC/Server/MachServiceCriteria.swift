@@ -200,7 +200,7 @@ public extension XPCServer {
             named name: String? = nil,
             withClientRequirement requirement: XPCServer.ClientRequirement? = nil
         ) throws -> MachServiceCriteria {
-            try validateThisProcessIsAnSMAppServiceDaemon().throwIfFailure()
+            try validateThisProcessIsAnSMAppServiceAgent().throwIfFailure()
             
             return try _forAgent(named: name, withClientRequirement: requirement)
         }
